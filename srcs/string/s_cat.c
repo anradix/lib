@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   s_join.c                                           :+:      :+:    :+:   */
+/*   s_cat.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/18 07:38:47 by anradix           #+#    #+#             */
-/*   Updated: 2019/12/18 09:01:49 by anradix          ###   ########.fr       */
+/*   Created: 2019/12/18 07:46:25 by anradix           #+#    #+#             */
+/*   Updated: 2019/12/18 08:59:06 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lib.h"
 
-char	*s_join(char *s1, char *s2)
+char	*s_cat(char *dst, char *src)
 {
-	char	*str;
-	size_t	len;
+	size_t i;
+	size_t j;
 
-	len = s_len(s1, 0, '\0') + s_len(s2, 0, '\0');
-	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
-		return (NULL);
-	s_cat(str, s1);
-	s_cat(str, s2);
-	return (str);
+	if (!dst || !src)
+		return (dst);
+	i = 0;
+	j = 0;
+	while (dst[i])
+		i++;
+	while (src[j])
+	{
+		dst[i] = src[j];
+		i++;
+		j++;
+	}
+	dst[i] = '\0';
+	return (dst);
 }

@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   s_join.c                                           :+:      :+:    :+:   */
+/*   m_set.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/18 07:38:47 by anradix           #+#    #+#             */
-/*   Updated: 2019/12/18 09:01:49 by anradix          ###   ########.fr       */
+/*   Created: 2019/12/18 08:26:11 by anradix           #+#    #+#             */
+/*   Updated: 2019/12/18 08:27:23 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lib.h"
 
-char	*s_join(char *s1, char *s2)
+void	*m_set(void *b, int c, size_t len)
 {
-	char	*str;
-	size_t	len;
-
-	len = s_len(s1, 0, '\0') + s_len(s2, 0, '\0');
-	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
-		return (NULL);
-	s_cat(str, s1);
-	s_cat(str, s2);
-	return (str);
+	while (len--)
+		((unsigned char*)b)[len] = (unsigned char)c;
+	return (b);
 }
