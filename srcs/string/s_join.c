@@ -6,7 +6,7 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/18 07:38:47 by anradix           #+#    #+#             */
-/*   Updated: 2019/12/18 09:01:49 by anradix          ###   ########.fr       */
+/*   Updated: 2019/12/19 07:30:38 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 char	*s_join(char *s1, char *s2)
 {
-	char	*str;
-	size_t	len;
+	char *str;
 
-	len = s_len(s1, 0, '\0') + s_len(s2, 0, '\0');
-	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
+	if (!s1 || !s2)
+		return (NULL);
+	if (!(str = s_new((s_len(s1, 0, '\0') + s_len(s2, 0 ,'\0')))))
 		return (NULL);
 	s_cat(str, s1);
 	s_cat(str, s2);
