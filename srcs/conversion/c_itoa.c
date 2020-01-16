@@ -6,11 +6,11 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 19:01:20 by anradix           #+#    #+#             */
-/*   Updated: 2019/11/16 22:11:49 by anradix          ###   ########.fr       */
+/*   Updated: 2020/01/16 08:06:05 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib.h"
+#include "mylib.h"
 
 char	*c_itoa(int nb, int base)
 {

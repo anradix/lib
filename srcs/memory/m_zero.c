@@ -6,11 +6,11 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/18 08:20:27 by anradix           #+#    #+#             */
-/*   Updated: 2019/12/18 08:28:09 by anradix          ###   ########.fr       */
+/*   Updated: 2020/01/16 08:06:40 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib.h"
+#include "mylib.h"
 
 void	m_zero(void *s, size_t n)
 {

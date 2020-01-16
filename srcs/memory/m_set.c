@@ -6,11 +6,11 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/18 08:26:11 by anradix           #+#    #+#             */
-/*   Updated: 2019/12/18 08:27:23 by anradix          ###   ########.fr       */
+/*   Updated: 2020/01/16 08:06:35 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib.h"
+#include "mylib.h"
 
 void	*m_set(void *b, int c, size_t len)
 {

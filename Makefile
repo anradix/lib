@@ -6,7 +6,7 @@
 #    By: anradix <anradix@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 11:35:13 by anradix           #+#    #+#              #
-#    Updated: 2019/12/18 08:22:54 by anradix          ###   ########.fr        #
+#    Updated: 2020/01/16 08:10:37 by anradix          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@
 .PHONY: fclean
 .PHONY: re
 
-NAME		= 	lib.a
+NAME		= 	mylib.a
 
 CC			= 	gcc
 FLAGS		= 	-Wall -Wextra -Werror
@@ -23,13 +23,16 @@ FLAGS		= 	-Wall -Wextra -Werror
 HEADER		=	header
 
 CONV		=	srcs/conversion
+IMP			=	srcs/import
 MEM			=	srcs/memory
 STR			=	srcs/string
+
 SOURCES		=	
 
 SOURCES		=	$(CONV)/c_atoi.c\
 				$(CONV)/c_itoa.c\
 				$(CONV)/c_nbrlen.c\
+				$(IMP)/i_file.c\
 				$(MEM)/m_alloc.c\
 				$(MEM)/m_set.c\
 				$(MEM)/m_zero.c\
@@ -50,7 +53,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
-	@echo "$(GREEN)\nlibft.a has been successfully created"
+	@echo "$(GREEN)\nmylib.a has been successfully created"
 
 %.o: %.c
 	@echo "$(GREEN).\c"
@@ -59,11 +62,11 @@ $(NAME): $(OBJS)
 clean:
 	@rm -rf $(OBJS)
 	@rm -rf $(OBJS_B)
-	@echo "$(YELLOW)libft clean OK"
+	@echo "$(YELLOW)mylib clean OK"
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "$(RED)libft fclean OK"
+	@echo "$(RED)mylib fclean OK"
 
 re: fclean all
 	@rm -f $(OBJ)

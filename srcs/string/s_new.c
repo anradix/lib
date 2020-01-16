@@ -6,11 +6,11 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 19:03:15 by anradix           #+#    #+#             */
-/*   Updated: 2019/12/18 07:58:39 by anradix          ###   ########.fr       */
+/*   Updated: 2020/01/16 08:07:05 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib.h"
+#include "mylib.h"
 
 char	*s_new(size_t size)
 {

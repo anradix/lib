@@ -6,11 +6,11 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 21:29:38 by anradix           #+#    #+#             */
-/*   Updated: 2019/11/16 21:47:03 by anradix          ###   ########.fr       */
+/*   Updated: 2020/01/16 08:06:10 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib.h"
+#include "mylib.h"
 
 size_t	c_nbrlen(int nb, int base, size_t len)
 {

@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   c_atoi.c                                           :+:      :+:    :+:   */
+/*   i_file.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/16 18:58:57 by anradix           #+#    #+#             */
-/*   Updated: 2020/01/16 08:07:08 by anradix          ###   ########.fr       */
+/*   Created: 2020/01/16 08:00:23 by anradix           #+#    #+#             */
+/*   Updated: 2020/01/16 08:06:27 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mylib.h"
 
-int	c_atoi(const char *nptr)
+char	*i_file(const char *file_path)
 {
-	short sign;
-	long long n;
+	char	*file;
+	char	*tmp;
+	char	buff[BUFF_SIZE + 1];
+	int		fd;
+	int		ret;
 
-	sign = 1;
-	n = 0;
-	while ((*nptr >= 9 && *nptr <= 13) || (*nptr == 32))
-		nptr++;
-	sign = (*nptr == '-') ? -1 : 1;
-	if (*nptr == '+' || *nptr == '-')
-		nptr++;
-	while (*nptr >= '0' && *nptr <= '9')
-		n = ((n * 10) + (*nptr++ - '0'));
-	if (n > 9223372036854775806)
-		return (sign == 1) ? -1 : 1;
-	return (sign * n);
+	fd = open(file_path, O_RDONLY);
+	if (fd < 0 || BUFF_SIZE < 1 || read(fd, buff, 0) != 0 || !(file = m_alloc(1)))
+		return (NULL);
+	while ((ret = read(fd, buff, BUFF_SIZE)) > 0)
+	{
+		buff[ret] = '\0';
+		tmp = file;
+		if (!(file = s_join(tmp, buff)))
+		{
+			free(file);
+			return (NULL);
+		}
+		free(tmp);
+	}
+	return (file);
 }
