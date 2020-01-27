@@ -6,7 +6,7 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 18:48:15 by anradix           #+#    #+#             */
-/*   Updated: 2020/01/16 08:07:57 by anradix          ###   ########.fr       */
+/*   Updated: 2020/01/27 07:23:25 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,6 @@ bool	s_diff(const char *s1, const char *s2);
 char	*s_join(char *s1, char *s2);
 size_t	s_len(char *s, size_t len, char c);
 char	*s_new(size_t size);
+char	**ft_split(char const *s, char c);
 
 #endif
