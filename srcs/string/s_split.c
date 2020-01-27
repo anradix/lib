@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   c_split.c                                          :+:      :+:    :+:   */
+/*   s_split.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/27 07:18:56 by anradix           #+#    #+#             */
-/*   Updated: 2020/01/27 07:21:10 by anradix          ###   ########.fr       */
+/*   Updated: 2020/01/27 07:27:03 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static int	wlen(char const *s, char c)
 	return (i);
 }
 
-char		**ft_split(char const *s, char c)
+char		**s_split(char const *s, char c)
 {
 	char	**tab;
 	size_t	j;
