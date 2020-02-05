@@ -6,12 +6,12 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 18:48:15 by anradix           #+#    #+#             */
-/*   Updated: 2020/01/27 07:24:51 by anradix          ###   ########.fr       */
+/*   Updated: 2020/02/05 16:11:15 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIB_H
-# define LIB_H
+#ifndef MYLIB_H
+# define MYLIB_H
 
 #ifndef BUFF_SIZE
 # define BUFF_SIZE 100
@@ -40,6 +40,7 @@ char	*i_file(const char *file_path);
 */
 void	*m_alloc(size_t size);
 void	*m_set(void *b, int c, size_t len);
+void	**m_tab(size_t y, size_t x, char c);
 void	m_zero(void *s, size_t n);
 
 /*
