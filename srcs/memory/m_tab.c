@@ -6,12 +6,12 @@
 /*   By: anradix <anradix@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/05 16:04:08 by anradix           #+#    #+#             */
-/*   Updated: 2020/02/05 16:09:53 by anradix          ###   ########.fr       */
+/*   Updated: 2020/02/05 16:46:50 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mylib.h"
-
+/*
 void	**m_tab(size_t y, size_t x, char c)
 {
 	size_t	i;
@@ -31,4 +31,32 @@ void	**m_tab(size_t y, size_t x, char c)
 	}
 	tab[i] = NULL;
 	return (tab);
+}
+*/
+
+
+void	**m_tab(size_t y, size_t x, char c)
+{
+	size_t	i;
+	size_t	j;
+	char	**tab;
+
+	i = 0;
+	if (!(tab = (char **)malloc(sizeof(char *) * (y + 1))))
+		return (NULL);
+	while (i < y)
+	{
+		j = 0;
+		if (!(tab[i] = (char *)malloc(sizeof(char) * (x + 1))))
+			return (0);
+		while (j < x)
+		{
+			tab[i][j] = c;
+			j++;
+		}
+		tab[i][j] = '\0';
+		i++;
+	}
+	tab[i] = NULL;
+	return ((void**)tab);
 }
