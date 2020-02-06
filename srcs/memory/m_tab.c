@@ -6,7 +6,7 @@
 /*   By: anradix <anradix@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/05 16:04:08 by anradix           #+#    #+#             */
-/*   Updated: 2020/02/05 16:46:50 by anradix          ###   ########.fr       */
+/*   Updated: 2020/02/06 11:17:25 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	**m_tab(size_t y, size_t x, char c)
 */
 
 
-void	**m_tab(size_t y, size_t x, char c)
+void	**m_tab(size_t x, size_t y, char c)
 {
 	size_t	i;
 	size_t	j;
