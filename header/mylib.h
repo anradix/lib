@@ -6,7 +6,7 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 18:48:15 by anradix           #+#    #+#             */
-/*   Updated: 2020/02/06 13:00:34 by anradix          ###   ########.fr       */
+/*   Updated: 2020/02/19 20:10:54 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,11 @@ char	*i_file(const char *file_path);
 /*
 ** mem
 */
-void	*m_alloc(size_t size);
-void	*m_set(void *b, int c, size_t len);
-void	**m_tab(size_t y, size_t x, char c);
-void	m_zero(void *s, size_t n);
+int		*m_alloc(size_t size, int c);
+void	m_free_tab(int **tab, size_t x);
+int		*m_set(int *s, int c, size_t size);
+int		**m_tab(size_t x, size_t y, int c);
+void	m_zero(void *s, size_t size);
 
 /*
 ** string

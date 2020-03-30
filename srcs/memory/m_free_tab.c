@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   m_set.c                                            :+:      :+:    :+:   */
+/*   m_free_tab.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/18 08:26:11 by anradix           #+#    #+#             */
-/*   Updated: 2020/02/10 15:59:52 by anradix          ###   ########.fr       */
+/*   Created: 2020/02/10 14:44:29 by anradix           #+#    #+#             */
+/*   Updated: 2020/02/19 20:11:21 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mylib.h"
 
-int	*m_set(int *s, int c, size_t size)
+void	m_free_tab(int **tab, size_t x)
 {
-	while (size-- > 0)
-		((int *)s)[size] = c;
-	return (s);
+	while (x--)
+		free(tab[x]);
+	free(tab);
+	tab = NULL;
 }

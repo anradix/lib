@@ -6,7 +6,7 @@
 #    By: anradix <anradix@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 11:35:13 by anradix           #+#    #+#              #
-#    Updated: 2020/02/05 17:25:49 by anradix          ###   ########.fr        #
+#    Updated: 2020/02/10 14:47:10 by anradix          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ SOURCES		=	$(CONV)/c_atoi.c\
 				$(CONV)/c_nbrlen.c\
 				$(IMP)/i_file.c\
 				$(MEM)/m_alloc.c\
+				$(MEM)/m_free_tab.c\
 				$(MEM)/m_set.c\
 				$(MEM)/m_tab.c\
 				$(MEM)/m_zero.c\
