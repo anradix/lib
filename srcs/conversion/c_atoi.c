@@ -6,7 +6,7 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 18:58:57 by anradix           #+#    #+#             */
-/*   Updated: 2020/01/16 08:07:08 by anradix          ###   ########.fr       */
+/*   Updated: 2020/06/08 00:28:03 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	c_atoi(const char *nptr)
 {
-	short sign;
-	long long n;
+	short		sign;
+	long long	n;
 
 	sign = 1;
 	n = 0;

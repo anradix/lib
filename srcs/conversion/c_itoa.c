@@ -6,7 +6,7 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 19:01:20 by anradix           #+#    #+#             */
-/*   Updated: 2020/01/16 08:06:05 by anradix          ###   ########.fr       */
+/*   Updated: 2020/06/08 00:27:44 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*c_itoa(int nb, int base)
 {
-	char		*s;
-	size_t		len;
+	char	*s;
+	size_t	len;
 	int		sign;
 
 	if (base < 2 || base > 36)

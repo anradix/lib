@@ -6,7 +6,7 @@
 #    By: anradix <anradix@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 11:35:13 by anradix           #+#    #+#              #
-#    Updated: 2020/02/10 14:47:10 by anradix          ###   ########.fr        #
+#    Updated: 2020/06/05 16:31:28 by anradix          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,7 @@ SOURCES		=	$(CONV)/c_atoi.c\
 				$(STR)/s_len.c\
 				$(STR)/s_new.c\
 				$(STR)/s_split.c\
+				$(STR)/s_trim.c\
 
 OBJS		=	$(SOURCES:.c=.o)
 

@@ -6,16 +6,16 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 18:48:15 by anradix           #+#    #+#             */
-/*   Updated: 2020/02/19 20:10:54 by anradix          ###   ########.fr       */
+/*   Updated: 2020/06/08 00:33:28 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MYLIB_H
 # define MYLIB_H
 
-#ifndef BUFF_SIZE
-# define BUFF_SIZE 100
-#endif
+# ifndef BUFF_SIZE
+#  define BUFF_SIZE 100
+# endif
 
 # include <string.h>
 # include <stdlib.h>
@@ -53,5 +53,6 @@ char	*s_join(char *s1, char *s2);
 size_t	s_len(const char *s, size_t len, char c);
 char	*s_new(size_t size);
 char	**s_split(char const *s, char c);
+char	*s_trim(char *s, char c);
 
 #endif
