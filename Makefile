@@ -6,7 +6,7 @@
 #    By: anradix <anradix@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 11:35:13 by anradix           #+#    #+#              #
-#    Updated: 2020/06/05 16:31:28 by anradix          ###   ########.fr        #
+#    Updated: 2020/06/19 14:38:39 by anradix          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,4 +73,4 @@ fclean: clean
 	@echo "$(RED)mylib fclean OK"
 
 re: fclean all
-	@rm -f $(OBJ)
+	@rm -f $(OBJS)
