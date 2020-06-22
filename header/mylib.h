@@ -6,7 +6,7 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 18:48:15 by anradix           #+#    #+#             */
-/*   Updated: 2020/06/22 19:57:15 by anradix          ###   ########.fr       */
+/*   Updated: 2020/06/22 20:16:57 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	*s_dup(const char *s);
 char	*s_join(char *s1, char *s2);
 size_t	s_len(const char *s, size_t len, char c);
 char	*s_new(size_t size);
-char	**s_new2d(size_t y, size_t y);
+char	**s_new2d(size_t y, size_t x);
 char	**s_split(char const *s, char c);
 char	*s_trim(char *s, char c);
 
