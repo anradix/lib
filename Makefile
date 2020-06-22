@@ -6,7 +6,7 @@
 #    By: anradix <anradix@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 11:35:13 by anradix           #+#    #+#              #
-#    Updated: 2020/06/19 14:38:39 by anradix          ###   ########.fr        #
+#    Updated: 2020/06/20 17:31:02 by anradix          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ SOURCES		=	$(CONV)/c_atoi.c\
 				$(MEM)/m_zero.c\
 				$(STR)/s_cat.c\
 				$(STR)/s_diff.c\
+				$(STR)/s_dup.c\
 				$(STR)/s_join.c\
 				$(STR)/s_len.c\
 				$(STR)/s_new.c\
