@@ -6,7 +6,7 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 18:48:15 by anradix           #+#    #+#             */
-/*   Updated: 2020/06/22 20:16:57 by anradix          ###   ########.fr       */
+/*   Updated: 2020/06/23 14:14:09 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ void	m_zero(void *s, size_t size);
 ** string
 */
 char	*s_cat(char *dst, char *src);
+void	s_copy(char *src, char *dst);
 bool	s_diff(const char *s1, const char *s2);
 char	*s_dup(const char *s);
 char	*s_join(char *s1, char *s2);
