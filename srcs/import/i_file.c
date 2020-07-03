@@ -6,7 +6,7 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 08:00:23 by anradix           #+#    #+#             */
-/*   Updated: 2020/02/19 20:09:55 by anradix          ###   ########.fr       */
+/*   Updated: 2020/07/03 23:37:52 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ char	*i_file(const char *file_path)
 		}
 		free(tmp);
 	}
+	close(fd);
 	return (file);
 }
