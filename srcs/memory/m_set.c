@@ -6,15 +6,15 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/18 08:26:11 by anradix           #+#    #+#             */
-/*   Updated: 2020/02/10 15:59:52 by anradix          ###   ########.fr       */
+/*   Updated: 2020/07/17 13:39:16 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mylib.h"
 
-int	*m_set(int *s, int c, size_t size)
+char	*m_set(char *s, char c, size_t n)
 {
-	while (size-- > 0)
-		((int *)s)[size] = c;
+	while (n--)
+		s[n] = c;
 	return (s);
 }

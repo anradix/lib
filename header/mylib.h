@@ -6,7 +6,7 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 18:48:15 by anradix           #+#    #+#             */
-/*   Updated: 2020/06/23 14:14:09 by anradix          ###   ########.fr       */
+/*   Updated: 2020/07/17 13:38:33 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ char	*i_file(const char *file_path);
 /*
 ** mem
 */
-int		*m_alloc(size_t size, int c);
-void	m_free_tab(int **tab, size_t x);
-int		*m_set(int *s, int c, size_t size);
-int		**m_tab(size_t x, size_t y, int c);
-void	m_zero(void *s, size_t size);
+char	*m_alloc(size_t n, char c);
+char	**m_alloc2d(size_t y, size_t x, char c);
+char	*m_dup(const char *s);
+void	m_free2d(char **s, size_t n);
+char	*m_set(char *s, char c, size_t n);
 
 /*
 ** string
@@ -50,11 +50,8 @@ void	m_zero(void *s, size_t size);
 char	*s_cat(char *dst, char *src);
 void	s_copy(char *src, char *dst);
 bool	s_diff(const char *s1, const char *s2);
-char	*s_dup(const char *s);
 char	*s_join(char *s1, char *s2);
 size_t	s_len(const char *s, size_t len, char c);
-char	*s_new(size_t size);
-char	**s_new2d(size_t y, size_t x);
 char	**s_split(char const *s, char c);
 char	*s_trim(char *s, char c);
 

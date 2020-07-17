@@ -6,7 +6,7 @@
 /*   By: anradix <anradix@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/05 16:01:10 by anradix           #+#    #+#             */
-/*   Updated: 2020/06/08 00:31:59 by anradix          ###   ########.fr       */
+/*   Updated: 2020/07/10 00:43:33 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char			*s_trim(char *s, char c)
 	size_t	i;
 	size_t	j;
 
-	if (!s || !(trim = s_new(get_new_len(s, c))))
+	if (!s || !(trim = m_alloc(get_new_len(s, c), '\0')))
 		return (NULL);
 	i = 0;
 	j = 0;

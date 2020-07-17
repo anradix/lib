@@ -6,7 +6,7 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 19:01:20 by anradix           #+#    #+#             */
-/*   Updated: 2020/06/08 00:27:44 by anradix          ###   ########.fr       */
+/*   Updated: 2020/07/10 00:46:07 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*c_itoa(int nb, int base)
 	len = c_nbrlen(nb, base, 0);
 	sign = (nb < 0) ? 1 : 0;
 	nb *= (nb < 0) ? -1 : 1;
-	if (!(s = s_new(len)))
+	if (!(s = (char *)m_alloc(len, '\0')))
 		return (NULL);
 	while (len-- > (size_t)sign)
 	{

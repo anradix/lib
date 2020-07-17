@@ -6,7 +6,7 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/27 07:18:56 by anradix           #+#    #+#             */
-/*   Updated: 2020/07/07 20:44:54 by anradix          ###   ########.fr       */
+/*   Updated: 2020/07/10 01:01:50 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char		**s_split(char const *s, char c)
 	size_t	j;
 	size_t	k;
 
-	if (!s || (!(tab = ((char**)malloc(sizeof(char*) * (wcount(s, c) + 1))))))
+	if (!s || (!(tab = (char **)m_alloc(wcount(s, c)+1, '\0'))))
 		return (NULL);
 	j = 0;
 	while (*s)
@@ -57,7 +57,7 @@ char		**s_split(char const *s, char c)
 		if (*s != c)
 		{
 			k = 0;
-			if (!(tab[j] = (char*)malloc(sizeof(char) * wlen(s, c) + 1)))
+			if (!(tab[j] = (char *)m_alloc(wlen(s, c)+1, '\0')))
 				return (NULL);
 			while (*s != c && *s != '\0')
 				tab[j][k++] = *s++;

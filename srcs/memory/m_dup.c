@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   s_new2d.c                                          :+:      :+:    :+:   */
+/*   m_dup.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anradix <anradix@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/22 19:13:37 by anradix           #+#    #+#             */
-/*   Updated: 2020/06/22 19:56:34 by anradix          ###   ########.fr       */
+/*   Created: 2020/07/10 00:28:29 by anradix           #+#    #+#             */
+/*   Updated: 2020/07/17 13:34:25 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mylib.h"
 
-char	**s_new2d(size_t y, size_t x)
+char	*m_dup(const char *s)
 {
-	size_t	i;
-	char	**s;
-
-	i = 0;
-	if (!(s = (char**)malloc(sizeof(char) * ((y+1)))))
+	size_t	len;
+	char	*dup;
+	
+	len = s_len(s, 0, 0);
+	if (!s || !(dup = m_alloc(len, '\0')))
 		return (NULL);
-	while (i < y)
-		s[i++] = s_new(x);
-	s[i] = NULL;
-	return (s);
+	while (len--)
+		dup[len] = s[len];
+	return (dup);
+
 }

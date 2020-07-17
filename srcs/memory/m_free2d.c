@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   m_zero.c                                           :+:      :+:    :+:   */
+/*   m_free2d.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
+/*   By: anradix <anradix@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/18 08:20:27 by anradix           #+#    #+#             */
-/*   Updated: 2020/02/07 14:09:14 by anradix          ###   ########.fr       */
+/*   Created: 2020/07/10 00:09:49 by anradix           #+#    #+#             */
+/*   Updated: 2020/07/17 13:34:57 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mylib.h"
 
-void	m_zero(void *s, size_t size)
+void	m_free2d(char **s, size_t n)
 {
-	m_set(s, '\0', size);
+	while (n--)
+		free(s[n]);
+	free(s);
+	s = NULL;
 }

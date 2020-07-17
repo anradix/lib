@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   s_cat.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
+/*   By: anradix <anradix@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/18 07:46:25 by anradix           #+#    #+#             */
-/*   Updated: 2020/01/16 08:06:44 by anradix          ###   ########.fr       */
+/*   Created: 2020/07/10 00:59:39 by anradix           #+#    #+#             */
+/*   Updated: 2020/07/17 13:44:53 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mylib.h"
 
-char	*s_cat(char *dst, char *src)
+char	*s_cat(char *dst, const char *src)
 {
 	size_t i;
 	size_t j;

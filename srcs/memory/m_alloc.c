@@ -6,17 +6,18 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 18:54:40 by anradix           #+#    #+#             */
-/*   Updated: 2020/02/10 15:59:14 by anradix          ###   ########.fr       */
+/*   Updated: 2020/07/17 13:38:15 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mylib.h"
 
-int		*m_alloc(size_t size, int c)
+char	*m_alloc(size_t n, char c)
 {
-	int *s;
+	char *s;
 
-	if (!(s = (int*)malloc(sizeof(int) * size)))
+	if (!(s = (char*)malloc(sizeof(char) * ((n + 1)))))
 		return (NULL);
-	return (m_set(s, c, size));
+	s[n] = '\0';
+	return (m_set(s, c, n));
 }

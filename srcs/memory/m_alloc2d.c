@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   s_new.c                                            :+:      :+:    :+:   */
+/*   m_alloc2d.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
+/*   By: anradix <anradix@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/16 19:03:15 by anradix           #+#    #+#             */
-/*   Updated: 2020/01/16 08:07:05 by anradix          ###   ########.fr       */
+/*   Created: 2020/07/10 00:24:39 by anradix           #+#    #+#             */
+/*   Updated: 2020/07/17 13:31:38 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mylib.h"
 
-char	*s_new(size_t size)
+char	**m_alloc2d(size_t y, size_t x, char c)
 {
-	char	*s;
+	size_t	i;
+	char	**tab;
 
-	if (!(s = (char*)malloc(sizeof(char) * ((size + 1)))))
+	i = 0;
+	if (!(tab = (char**)malloc(sizeof(char*) * (y + 1))))
 		return (NULL);
-	size++;
-	while (size--)
-		s[size] = '\0';
-	return (s);
+	while (i < y)
+		if (!(tab[i++] = m_alloc(x, c)))
+			return (NULL);
+	tab[i] = NULL;
+	return (tab);
 }
