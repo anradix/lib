@@ -6,13 +6,13 @@
 /*   By: anradix <anradix@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/10 00:59:39 by anradix           #+#    #+#             */
-/*   Updated: 2020/07/17 13:44:53 by anradix          ###   ########.fr       */
+/*   Updated: 2020/07/17 13:49:21 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mylib.h"
 
-char	*s_cat(char *dst, const char *src)
+char	*s_cat(char *dst, char *src)
 {
 	size_t i;
 	size_t j;
