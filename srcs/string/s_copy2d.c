@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   m_free2d.c                                         :+:      :+:    :+:   */
+/*   s_copy2d.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anradix <anradix@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/10 00:09:49 by anradix           #+#    #+#             */
-/*   Updated: 2020/07/17 14:01:01 by anradix          ###   ########.fr       */
+/*   Created: 2020/07/18 12:37:54 by anradix           #+#    #+#             */
+/*   Updated: 2020/07/18 12:40:37 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mylib.h"
 
-void	m_free2d(char **s)
+void	s_copy2d(char **src, char **dst)
 {
-	size_t i;
-
-	i = 0;
-	while (s && s[i] != NULL)
-	{
-		free(s[i]);
-		i++;
-	}
-	//free(s);
-	s = NULL;
+	while (*src)
+		s_copy(*src++, *dst++);
 }
