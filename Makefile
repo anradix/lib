@@ -6,7 +6,7 @@
 #    By: anradix <anradix@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 11:35:13 by anradix           #+#    #+#              #
-#    Updated: 2020/07/20 09:41:28 by anradix          ###   ########.fr        #
+#    Updated: 2020/07/20 14:47:52 by anradix          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,13 +39,13 @@ SOURCES		=	$(CHAR)/c_find.c\
 				$(MEM)/m_alloc2d.c\
 				$(MEM)/m_dup.c\
 				$(MEM)/m_free2d.c\
-				$(MEM)/m_set.c\
 				$(STR)/s_cat.c\
 				$(STR)/s_copy.c\
 				$(STR)/s_copy2d.c\
 				$(STR)/s_diff.c\
 				$(STR)/s_join.c\
 				$(STR)/s_len.c\
+				$(STR)/s_set.c\
 				$(STR)/s_split.c\
 				$(STR)/s_trim.c\
 

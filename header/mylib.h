@@ -6,7 +6,7 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 18:48:15 by anradix           #+#    #+#             */
-/*   Updated: 2020/07/20 09:40:49 by anradix          ###   ########.fr       */
+/*   Updated: 2020/07/20 14:48:05 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ char	*m_alloc(size_t n, char c);
 char	**m_alloc2d(size_t y, size_t x, char c);
 char	*m_dup(const char *s);
 void	m_free2d(char **s);
-char	*m_set(char *s, char c, size_t n);
 
 /*
 ** string
@@ -58,6 +57,7 @@ void	s_copy2d(char **src, char **dst);
 bool	s_diff(const char *s1, const char *s2);
 char	*s_join(char *s1, char *s2);
 size_t	s_len(const char *s, size_t len, char c);
+void	s_set(char *s, size_t n ,char c);
 char	**s_split(char const *s, char c);
 char	*s_trim(char *s, char c);
 

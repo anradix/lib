@@ -6,22 +6,16 @@
 /*   By: anradix <anradix@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/10 00:09:49 by anradix           #+#    #+#             */
-/*   Updated: 2020/07/17 14:01:01 by anradix          ###   ########.fr       */
+/*   Updated: 2020/07/20 14:49:04 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mylib.h"
 
-void	m_free2d(char **s)
+void	free2d(void **s, size_t y)
 {
-	size_t i;
-
-	i = 0;
-	while (s && s[i] != NULL)
-	{
-		free(s[i]);
-		i++;
-	}
-	//free(s);
+	while (y--)
+		free(s[y]);
+	free(s);
 	s = NULL;
 }
