@@ -6,7 +6,7 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 18:48:15 by anradix           #+#    #+#             */
-/*   Updated: 2020/07/18 12:40:28 by anradix          ###   ########.fr       */
+/*   Updated: 2020/07/20 09:40:49 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,11 @@
 # include <stdbool.h>
 # include <unistd.h>
 # include <fcntl.h>
+
+/*
+** char
+*/
+bool	c_find(const char c, char *s);
 
 /*
 ** conv

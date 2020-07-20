@@ -6,7 +6,7 @@
 #    By: anradix <anradix@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 11:35:13 by anradix           #+#    #+#              #
-#    Updated: 2020/07/18 12:41:01 by anradix          ###   ########.fr        #
+#    Updated: 2020/07/20 09:41:28 by anradix          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ FLAGS		= 	-Wall -Wextra -Werror
 
 HEADER		=	header
 
+CHAR		=	srcs/char
 CONV		=	srcs/conversion
 IMP			=	srcs/import
 MEM			=	srcs/memory
@@ -29,7 +30,8 @@ STR			=	srcs/string
 
 SOURCES		=	
 
-SOURCES		=	$(CONV)/c_atoi.c\
+SOURCES		=	$(CHAR)/c_find.c\
+				$(CONV)/c_atoi.c\
 				$(CONV)/c_itoa.c\
 				$(CONV)/c_nbrlen.c\
 				$(IMP)/i_file.c\
