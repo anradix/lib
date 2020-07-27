@@ -6,7 +6,7 @@
 #    By: anradix <anradix@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 11:35:13 by anradix           #+#    #+#              #
-#    Updated: 2020/07/20 14:47:52 by anradix          ###   ########.fr        #
+#    Updated: 2020/07/28 01:34:25 by anradix          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,23 +26,27 @@ CHAR		=	srcs/char
 CONV		=	srcs/conversion
 IMP			=	srcs/import
 MEM			=	srcs/memory
+PRINT		=	srcs/print
 STR			=	srcs/string
 
 SOURCES		=	
 
-SOURCES		=	$(CHAR)/c_find.c\
-				$(CONV)/c_atoi.c\
+SOURCES		=	$(CONV)/c_atoi.c\
 				$(CONV)/c_itoa.c\
 				$(CONV)/c_nbrlen.c\
 				$(IMP)/i_file.c\
 				$(MEM)/m_alloc.c\
 				$(MEM)/m_alloc2d.c\
 				$(MEM)/m_dup.c\
+				$(MEM)/m_exit.c\
 				$(MEM)/m_free2d.c\
+				$(PRINT)/p_nbr.c\
+				$(PRINT)/p_str.c\
 				$(STR)/s_cat.c\
 				$(STR)/s_copy.c\
 				$(STR)/s_copy2d.c\
 				$(STR)/s_diff.c\
+				$(STR)/s_find.c\
 				$(STR)/s_join.c\
 				$(STR)/s_len.c\
 				$(STR)/s_set.c\

@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   m_alloc2d.c                                        :+:      :+:    :+:   */
+/*   m_exit.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anradix <anradix@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/10 00:24:39 by anradix           #+#    #+#             */
-/*   Updated: 2020/07/28 01:07:38 by anradix          ###   ########.fr       */
+/*   Created: 2020/07/20 14:54:48 by anradix           #+#    #+#             */
+/*   Updated: 2020/07/28 01:23:10 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mylib.h"
 
-char	**m_alloc2d(size_t x, size_t y, char c)
+int	m_exit(char *frmt, ...)
 {
-	char	**s;
+	va_list ap;
 
-	if (!(s = (char**)malloc(sizeof(char*) * y)))
-		return (NULL);
-	s[y+1] = NULL;
-	while (y--)
-		if (!(s[y] = m_alloc(x, c)))
-			return (NULL);
-	return (s);
+	if (!frmt)
+		return (0);
+	va_start(ap, frmt);
+	while(*frmt)
+	{
+		if (*frmt == 'a')
+			free(va_arg(ap, char*));
+		if (*frmt == 'b')
+			m_free2d(va_arg(ap, char**));
+		frmt++;
+	}
+	va_end(ap);	
+	return (0);
 }

@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   c_find.c                                           :+:      :+:    :+:   */
+/*   s_find.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anradix <anradix@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/20 09:36:47 by anradix           #+#    #+#             */
-/*   Updated: 2020/07/20 09:40:17 by anradix          ###   ########.fr       */
+/*   Updated: 2020/07/28 01:34:56 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mylib.h"
 
-bool	c_find(const char c, char *s)
+bool	s_find(const char c, char *s)
 {
 	if (!s || !*s)
 		return (0);
-	return (c == *s) ? 1 : c_find(c, s + 1);
+	return (c == *s) ? 1 : s_find(c, s + 1);
 }

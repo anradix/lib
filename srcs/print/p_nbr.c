@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   m_alloc2d.c                                        :+:      :+:    :+:   */
+/*   p_nbr.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anradix <anradix@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/10 00:24:39 by anradix           #+#    #+#             */
-/*   Updated: 2020/07/28 01:07:38 by anradix          ###   ########.fr       */
+/*   Created: 2020/07/28 00:53:56 by anradix           #+#    #+#             */
+/*   Updated: 2020/07/28 01:15:16 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mylib.h"
 
-char	**m_alloc2d(size_t x, size_t y, char c)
+void	p_nbr(long long nb, int base)
 {
-	char	**s;
+	char	buff[c_nbrlen(nb, base, 0)];
+	size_t	i;
 
-	if (!(s = (char**)malloc(sizeof(char*) * y)))
-		return (NULL);
-	s[y+1] = NULL;
-	while (y--)
-		if (!(s[y] = m_alloc(x, c)))
-			return (NULL);
-	return (s);
+	i = 0;
+	if (base < 2)
+		return ;
+	if (nb < 0)
+	{
+		buff[i] = '-';
+		nb = -nb;
+		i++;
+	}
+	while (nb >= base)
+	{
+		nb /= base;
+		buff[i] = (nb % base < 10) ? nb % base + '0' : nb % base + 'A' - 10;
+		i++;
+	}
+	buff[i] = (nb % base < 10) ? nb % base + '0' : nb % base + 'A' - 10;
+	write(1, &buff, i+1);
 }

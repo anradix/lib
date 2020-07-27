@@ -6,7 +6,7 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 18:48:15 by anradix           #+#    #+#             */
-/*   Updated: 2020/07/20 14:48:05 by anradix          ###   ########.fr       */
+/*   Updated: 2020/07/28 01:33:32 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,7 @@
 # include <stdbool.h>
 # include <unistd.h>
 # include <fcntl.h>
-
-/*
-** char
-*/
-bool	c_find(const char c, char *s);
+# include <stdarg.h>
 
 /*
 ** conv
@@ -46,7 +42,14 @@ char	*i_file(const char *file_path);
 char	*m_alloc(size_t n, char c);
 char	**m_alloc2d(size_t y, size_t x, char c);
 char	*m_dup(const char *s);
+int		m_exit(char *frmt, ...);
 void	m_free2d(char **s);
+
+/*
+** print
+*/
+void	p_nbr(long long nb, int base);
+void	p_str(const char *s);
 
 /*
 ** string
@@ -55,6 +58,7 @@ char	*s_cat(char *dst, char *src);
 void	s_copy(char *src, char *dst);
 void	s_copy2d(char **src, char **dst);
 bool	s_diff(const char *s1, const char *s2);
+bool	s_find(const char c, char *s);
 char	*s_join(char *s1, char *s2);
 size_t	s_len(const char *s, size_t len, char c);
 void	s_set(char *s, size_t n ,char c);

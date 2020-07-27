@@ -6,7 +6,7 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 21:29:38 by anradix           #+#    #+#             */
-/*   Updated: 2020/06/08 00:28:37 by anradix          ###   ########.fr       */
+/*   Updated: 2020/07/28 01:14:58 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	c_nbrlen(int nb, int base, size_t len)
 {
-	if (nb == 0 && len == 0)
+	if ((nb == 0 && len == 0) || base < 2)
 		return (1);
 	if (nb < 0)
 		return (c_nbrlen(nb * -1, base, len + 1));
