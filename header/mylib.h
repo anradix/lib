@@ -6,7 +6,7 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 18:48:15 by anradix           #+#    #+#             */
-/*   Updated: 2020/07/28 01:33:32 by anradix          ###   ########.fr       */
+/*   Updated: 2020/07/28 04:00:41 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,8 @@ void	m_free2d(char **s);
 ** print
 */
 void	p_nbr(long long nb, int base);
-void	p_str(const char *s);
+void	p_str(char *s);
+void	p_str2d(char **s);
 
 /*
 ** string
