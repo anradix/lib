@@ -6,18 +6,23 @@
 /*   By: anradix <anradix@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 14:11:53 by anradix           #+#    #+#             */
-/*   Updated: 2020/06/23 14:13:53 by anradix          ###   ########.fr       */
+/*   Updated: 2020/07/28 02:30:16 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mylib.h"
+#include <stdio.h>
 
 void	s_copy(char *src, char *dst)
 {
-	while (*src)
+	size_t i;
+
+	i = 0;
+	if (!src || !dst)
+		return ;
+	while (src[i])
 	{
-		*dst = *src;
-		src++;
-		dst++;
+		dst[i] = src[i];
+		i++;
 	}
 }
