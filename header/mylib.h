@@ -6,7 +6,7 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 18:48:15 by anradix           #+#    #+#             */
-/*   Updated: 2020/07/28 04:00:41 by anradix          ###   ########.fr       */
+/*   Updated: 2020/08/25 08:00:21 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ bool	s_find(const char c, char *s);
 char	*s_join(char *s1, char *s2);
 size_t	s_len(const char *s, size_t len, char c);
 void	s_set(char *s, size_t n ,char c);
-char	**s_split(char const *s, char c);
+char	**s_split(char *s, char c);
 char	*s_trim(char *s, char c);
 
 #endif
