@@ -6,12 +6,11 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/27 07:18:56 by anradix           #+#    #+#             */
-/*   Updated: 2020/08/25 08:40:33 by anradix          ###   ########.fr       */
+/*   Updated: 2020/09/03 09:20:50 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mylib.h"
-#include <stdio.h>
 
 static int	wcount(char *s, char c)
 {
@@ -45,7 +44,11 @@ char	**s_split(char *s, char c)
 		if (*s != c)
 		{
 			if (!(tab[j] = m_alloc(s_len(&(*s), 0, c), '\0')))
+			{
+				tab[j] =  NULL;
+				m_free2d(tab);
 				return (NULL);
+			}
 			k = 0;
 			while (*s && *s != c)
 				tab[j][k++] = *(s++);
