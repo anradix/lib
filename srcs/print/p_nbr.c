@@ -6,7 +6,7 @@
 /*   By: anradix <anradix@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/28 00:53:56 by anradix           #+#    #+#             */
-/*   Updated: 2020/07/28 01:15:16 by anradix          ###   ########.fr       */
+/*   Updated: 2020/09/16 19:57:47 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ void	p_nbr(long long nb, int base)
 		i++;
 	}
 	buff[i] = (nb % base < 10) ? nb % base + '0' : nb % base + 'A' - 10;
-	write(1, &buff, i+1);
+	write(1, &buff, i + 1);
 }

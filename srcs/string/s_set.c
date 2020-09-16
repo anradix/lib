@@ -6,13 +6,13 @@
 /*   By: anradix <anradix@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/20 14:44:41 by anradix           #+#    #+#             */
-/*   Updated: 2020/07/20 14:46:18 by anradix          ###   ########.fr       */
+/*   Updated: 2020/09/16 20:16:27 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mylib.h"
 
-void	s_set(char *s, size_t n ,char c)
+void	s_set(char *s, size_t n, char c)
 {
 	while (n--)
 		s[n] = c;

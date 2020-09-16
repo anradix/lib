@@ -6,7 +6,7 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 18:48:15 by anradix           #+#    #+#             */
-/*   Updated: 2020/08/25 08:00:21 by anradix          ###   ########.fr       */
+/*   Updated: 2020/09/16 20:20:04 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 # include <stdbool.h>
 # include <unistd.h>
 # include <fcntl.h>
-# include <stdarg.h>
 
 /*
 ** conv
@@ -42,8 +41,8 @@ char	*i_file(const char *file_path);
 char	*m_alloc(size_t n, char c);
 char	**m_alloc2d(size_t y, size_t x, char c);
 char	*m_dup(const char *s);
-int		m_exit(char *frmt, ...);
 void	m_free2d(char **s);
+void	m_swap(int *a, int *b);
 
 /*
 ** print
@@ -62,7 +61,7 @@ bool	s_diff(const char *s1, const char *s2);
 bool	s_find(const char c, char *s);
 char	*s_join(char *s1, char *s2);
 size_t	s_len(const char *s, size_t len, char c);
-void	s_set(char *s, size_t n ,char c);
+void	s_set(char *s, size_t n, char c);
 char	**s_split(char *s, char c);
 char	*s_trim(char *s, char c);
 

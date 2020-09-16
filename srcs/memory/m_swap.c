@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   m_exit.c                                           :+:      :+:    :+:   */
+/*   m_swap.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anradix <anradix@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/20 14:54:48 by anradix           #+#    #+#             */
-/*   Updated: 2020/07/28 01:23:10 by anradix          ###   ########.fr       */
+/*   Created: 2020/09/16 06:23:15 by anradix           #+#    #+#             */
+/*   Updated: 2020/09/16 06:31:06 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mylib.h"
 
-int	m_exit(char *frmt, ...)
+void	m_swap(int *a, int *b)
 {
-	va_list ap;
+	int tmp;
 
-	if (!frmt)
-		return (0);
-	va_start(ap, frmt);
-	while(*frmt)
-	{
-		if (*frmt == 'a')
-			free(va_arg(ap, char*));
-		if (*frmt == 'b')
-			m_free2d(va_arg(ap, char**));
-		frmt++;
-	}
-	va_end(ap);	
-	return (0);
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }

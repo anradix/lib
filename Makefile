@@ -6,7 +6,7 @@
 #    By: anradix <anradix@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 11:35:13 by anradix           #+#    #+#              #
-#    Updated: 2020/07/28 03:56:35 by anradix          ###   ########.fr        #
+#    Updated: 2020/09/16 20:21:07 by anradix          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ NAME		= 	mylib.a
 CC			= 	gcc
 FLAGS		= 	-Wall -Wextra -Werror
 
-HEADER		=	header
+HEADER		=	./
 
 CHAR		=	srcs/char
 CONV		=	srcs/conversion
@@ -38,8 +38,8 @@ SOURCES		=	$(CONV)/c_atoi.c\
 				$(MEM)/m_alloc.c\
 				$(MEM)/m_alloc2d.c\
 				$(MEM)/m_dup.c\
-				$(MEM)/m_exit.c\
 				$(MEM)/m_free2d.c\
+				$(MEM)/m_swap.c\
 				$(PRINT)/p_nbr.c\
 				$(PRINT)/p_str.c\
 				$(PRINT)/p_str2d.c\

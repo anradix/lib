@@ -6,12 +6,11 @@
 /*   By: anradix <anradix@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 14:11:53 by anradix           #+#    #+#             */
-/*   Updated: 2020/07/28 02:30:16 by anradix          ###   ########.fr       */
+/*   Updated: 2020/09/16 20:17:34 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mylib.h"
-#include <stdio.h>
 
 void	s_copy(char *src, char *dst)
 {

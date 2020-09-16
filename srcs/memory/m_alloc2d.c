@@ -6,7 +6,7 @@
 /*   By: anradix <anradix@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/10 00:24:39 by anradix           #+#    #+#             */
-/*   Updated: 2020/09/03 12:25:25 by anradix          ###   ########.fr       */
+/*   Updated: 2020/09/16 20:09:24 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	**m_alloc2d(size_t y, size_t x, char c)
 	char	**s;
 	size_t	i;
 
-	if (!(s = (char**)malloc(sizeof(char*) * y+1)))
+	if (!(s = (char**)malloc(sizeof(char*) * y + 1)))
 		return (NULL);
 	i = 0;
 	while (i < y)

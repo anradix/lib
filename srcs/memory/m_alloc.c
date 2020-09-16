@@ -6,7 +6,7 @@
 /*   By: anradix <anradix@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/16 18:54:40 by anradix           #+#    #+#             */
-/*   Updated: 2020/07/20 14:49:37 by anradix          ###   ########.fr       */
+/*   Updated: 2020/09/16 19:53:11 by anradix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*m_alloc(size_t x, char c)
 {
 	char *s;
 
-	if (!(s = (char*)malloc(sizeof(char) * x+1)))
+	if (!(s = (char*)malloc(sizeof(char) * x + 1)))
 		return (NULL);
 	s[x] = '\0';
 	s_set(s, x, c);
